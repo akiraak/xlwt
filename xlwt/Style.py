@@ -201,7 +201,7 @@ class StyleCollection(object):
         alist = [
             (v, k)
             for k, v in self._num_formats.items()
-            if v >= FIRST_USER_DEFINED_NUM_FORMAT_IDX
+            if k and v >= FIRST_USER_DEFINED_NUM_FORMAT_IDX
             ]
         alist.sort()
         for fmtidx, fmtstr in alist:
